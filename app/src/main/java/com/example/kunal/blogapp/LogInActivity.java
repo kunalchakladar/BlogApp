@@ -84,7 +84,7 @@ public class LogInActivity extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            startActivity(new Intent(LogInActivity.this, TimelineActivity.class));
+                            startActivity(new Intent(LogInActivity.this, MainActivity.class));
                             finish();
 
                         } else {
@@ -106,7 +106,7 @@ public class LogInActivity extends AppCompatActivity {
         super.onStart();
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
         if(currentUser != null) {
-            startActivity(new Intent(this, TimelineActivity.class));
+            startActivity(new Intent(this, MainActivity.class));
             finish();
         }
     }

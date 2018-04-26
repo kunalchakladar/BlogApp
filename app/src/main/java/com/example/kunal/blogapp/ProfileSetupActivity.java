@@ -130,7 +130,7 @@ public class ProfileSetupActivity extends AppCompatActivity {
         User user = new User(name, email, imgURL);
         Log.d(TAG, "next: " + user.getImageURL());
         userDatabaseReference.child(mAuth.getCurrentUser().getUid()).setValue(user);
-        startActivity(new Intent(this, TimelineActivity.class));
+        startActivity(new Intent(this, MainActivity.class));
         finish();
     }
 
